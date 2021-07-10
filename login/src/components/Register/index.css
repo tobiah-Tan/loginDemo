@@ -1,0 +1,50 @@
+#register-box{
+    text-align: center;
+}
+
+#logo-box{
+    width: 400px;
+    height: 150px;
+    margin: 70px auto 10px;
+
+    text-align: center;
+}
+
+#register-box svg{
+    width: 100px;
+    height: 100px;
+}
+
+#register-container{
+    width: 300px;
+    height: 420px;
+    text-align: center;
+    border: 1px solid #cbcbcb;
+    background: #00000060;
+    border-radius: 10px;
+    margin: auto;
+}
+
+#register-container #input-label{
+    font-size: 12px;
+    float: left;
+    margin: 2px 4px;
+    color: floralwhite;
+}
+
+#submit-btn{
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-family: fantasy;
+    border-radius: 8px;
+    background: linear-gradient(45deg,lightblue,lightgreen,yellowgreen,lightyellow);
+}
+#create-account-block{
+    padding: 10px 2px;
+    text-align: center;
+    margin: 25px 10px;
+    border-radius: 10px;
+    background-color: #ebebeb;
+}

@@ -1,0 +1,33 @@
+#home-box-container{
+    width: 600px;
+    height: 400px;
+    margin: 60px auto;
+    text-align: center;
+}
+#home-box-container svg{
+    animation: fadeInAnimation ease 3s;
+}
+@keyframes fadeInAnimation {
+    /*相当于设置两个帧，进行动画切换*/
+    0% {
+        opacity: 0;/*设置不透明度*/
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#home-box-container p{
+    font-size: 50px;
+    font-family: STXingkai, BiauKai, DFKai-SB,KaiTi, serif;
+}
+#home-box-container button {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-family: fzshuti;
+    margin: 5px;
+    background: linear-gradient(45deg,lightblue, #c8ffbd, #fcff5b,lightyellow);
+    border-radius: 8px;
+}

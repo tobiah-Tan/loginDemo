@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import './index.css'
+import "./index.css";
 import {NavLink,Route} from 'react-router-dom';
-import Logon from "../Logon";
+import Register from "../Register";
 
-class Register extends Component {
+
+export default class Logon extends Component {
+
+
     render() {
         return (
-            <div id="register-box">
+            <div id="logon-container" >
                 <div id="logo-box">
                     <svg d="1625815721089" className="icon" viewBox="0 0 1024 1024" version="1.1"
                          xmlns="http://www.w3.org/2000/svg" p-id="2688" width="200" height="200">
@@ -31,32 +34,32 @@ class Register extends Component {
                             d="M294.833797 332.790256m-46.529944 0a46.529945 46.529945 0 1 0 93.059889 0 46.529945 46.529945 0 1 0-93.059889 0Z"
                             fill="#7A993B" p-id="2696"/>
                     </svg>
-                    <p id="welcome-slogan">Welcome to the pages of Register!</p>
+                    <p id="welcome-slogan">Welcome U</p>
                 </div>
-                <div id="register-container">
+                <div id="register-box-container">
+                    <h2 id="register-title">Login</h2>
                     <form id="input-form" action="/session">
                         <div id={"input-block"}>
-                            <label id="input-label" htmlFor="username">请输入用户名/邮箱</label>
-                            <input id="input-username-text" type="text"/><br/><br/>
+                            <label htmlFor="username"/>
+                            <input id="input-username-text" type="text" placeholder={"Username"}/><br/><br/>
                         </div>
                         <div id={"input-block"}>
-                            <label id="input-label" htmlFor="password">请输入密码</label>
-                            <input id="input-password-text" type="password" /><br/><br/>
+                            <a id={"password-reset-hyperlink"} href="/password reset">Forget Password?</a>
+                            <input id="input-password-text" type="password" placeholder={"Password"}/><br/><br/>
                         </div>
-                        <div id={"input-block"}>
-                            <label id="input-label" htmlFor="password">请确认密码</label>
-                            <input id="input-password-text" type="password" /><br/><br/>
-                        </div>
-                        <input id="submit-btn" type="submit" name="commit" value="Sign   Up"/>
+                        <input id="submit-btn" type="submit" name="commit" value="Sign   in"/>
                     </form>
                     <p id="create-account-block">
-                        <NavLink to="/Logon">Back Logon</NavLink>
+                        No account?
+                        {/*<a href="/#">Click here to Create!</a>*/}
+                        <NavLink to="/register">Click here to Create!</NavLink>
                     </p>
-                    <Route exact path="/Logon" component={Logon}/>
+                    <div>
+                        <Route exact path="/register" component={Register}/>
+                    </div>
                 </div>
+
             </div>
         );
     }
 }
-
-export default Register;
