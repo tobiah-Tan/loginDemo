@@ -36,20 +36,20 @@ export default class Logon extends Component {
                     </svg>
                     <p id="welcome-slogan">Welcome U</p>
                 </div>
-                <div id="register-box-container">
-                    <h2 id="register-title">Login</h2>
-                    <form id="input-form" action="/session">
+                <div id="logon-box-container">
+                    <h2 id="logon-title">Login</h2>
+                    <form id="logon-input-form" action="/session">
                         <div id={"input-block"}>
                             <label htmlFor="username"/>
                             <input id="input-username-text" type="text" placeholder={"Username"}/><br/><br/>
                         </div>
-                        <div id={"input-block"}>
+                        <div id={"logon-input-block"}>
                             <a id={"password-reset-hyperlink"} href="/password reset">Forget Password?</a>
                             <input id="input-password-text" type="password" placeholder={"Password"}/><br/><br/>
                         </div>
-                        <input id="submit-btn" type="submit" name="commit" value="Sign   in"/>
+                        <input id="logon-submit-btn" type="submit" name="commit" value="Sign   in"/>
                     </form>
-                    <p id="create-account-block">
+                    <p id="logon-create-block">
                         No account?
                         {/*<a href="/#">Click here to Create!</a>*/}
                         <NavLink to="/register">Click here to Create!</NavLink>

@@ -4,7 +4,30 @@ import {NavLink,Route} from 'react-router-dom';
 import Logon from "../Logon";
 
 class Register extends Component {
+
+    state={
+        username:'',
+        password:'',
+        passwordConfirm:'',
+    };
+
+    handleSubmit= e =>{
+        // 取消事件的默认操作preventDefault
+        e.preventDefault();
+
+        console.log(this.state);
+    };
+
+    handleChange= e =>{
+        this.setState({
+            //key:value
+            //属性名不是name，是name变量中的值
+            [e.target.name]:e.target.value
+        })
+    };
+
     render() {
+        const {username,password,passwordConfirm} = this.state;
         return (
             <div id="register-box">
                 <div id="logo-box">
@@ -34,20 +57,20 @@ class Register extends Component {
                     <p id="welcome-slogan">Welcome to the pages of Register!</p>
                 </div>
                 <div id="register-container">
-                    <form id="input-form" action="/session">
+                    <form id="register-input-form" action="/session" onSubmit={this.handleSubmit}>
                         <div id={"input-block"}>
                             <label id="input-label" htmlFor="username">请输入用户名/邮箱</label>
-                            <input id="input-username-text" type="text"/><br/><br/>
+                            <input id="input-username-text" type="text" defaultValue={username} name="username" onChange={this.handleChange} /><br/><br/>
                         </div>
                         <div id={"input-block"}>
                             <label id="input-label" htmlFor="password">请输入密码</label>
-                            <input id="input-password-text" type="password" /><br/><br/>
+                            <input id="input-password-text" type="password" defaultValue={password} name="password" onChange={this.handleChange}/><br/><br/>
                         </div>
                         <div id={"input-block"}>
                             <label id="input-label" htmlFor="password">请确认密码</label>
-                            <input id="input-password-text" type="password" /><br/><br/>
+                            <input id="input-password-confirm" type="password" defaultValue={passwordConfirm} name="passwordConfirm" onChange={this.handleChange}/><br/><br/>
                         </div>
-                        <input id="submit-btn" type="submit" name="commit" value="Sign   Up"/>
+                        <input id="register-submit-btn" type="submit" name="commit" value="Sign   Up"/>
                     </form>
                     <p id="create-account-block">
                         <NavLink to="/Logon">Back Logon</NavLink>
