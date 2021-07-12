@@ -5,7 +5,7 @@
     text-align: center;
 }
 #home-box-container svg{
-    animation: fadeInAnimation ease 3s;
+    animation: fadeInAnimation ease 5s;
 }
 @keyframes fadeInAnimation {
     /*相当于设置两个帧，进行动画切换*/
