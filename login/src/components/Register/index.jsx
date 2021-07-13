@@ -14,11 +14,12 @@ class Register extends Component {
         passwordConfirm:'',
     };
 
-    handleSubmit= e =>{
+    handleSubmit = e => {
         // 取消事件的默认操作preventDefault
         e.preventDefault();
 
-        this.props.registerFn.registerAc();
+        // this.props.registerFn.registerAc();
+        console.log(this.props.registerData.name);
     };
 
     handleChange= e =>{
@@ -87,7 +88,7 @@ class Register extends Component {
 
 const mapStateToProps = state =>{
     return{
-        registerDate:state.register
+        registerData:state.register
     }
 };
 

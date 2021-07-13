@@ -5,4 +5,4 @@ import {reducer as registerReducer} from '../components/Register/store'
 
 export default combineReducers({
     register:registerReducer
-})
+});
