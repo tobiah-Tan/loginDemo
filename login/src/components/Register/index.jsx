@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import './index.css'
 import {NavLink,Route} from 'react-router-dom';
 import Logon from "../Logon";
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {actionCreators as registerActionCreators} from './store';
 
 class Register extends Component {
 
@@ -15,7 +18,7 @@ class Register extends Component {
         // 取消事件的默认操作preventDefault
         e.preventDefault();
 
-        console.log(this.state);
+        this.props.registerFn.registerAc();
     };
 
     handleChange= e =>{
@@ -82,4 +85,16 @@ class Register extends Component {
     }
 }
 
-export default Register;
+const mapStateToProps = state =>{
+    return{
+        registerDate:state.register
+    }
+};
+
+const mapDispatchToProps = dispatch=>{
+    return{
+        registerFn:bindActionCreators(registerActionCreators,dispatch)
+    }
+};
+
+export default connect(mapStateToProps,mapDispatchToProps,)(Register);
