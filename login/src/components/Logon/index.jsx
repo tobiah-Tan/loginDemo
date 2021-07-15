@@ -44,7 +44,7 @@ export default class Logon extends Component {
                             <input id="input-username-text" type="text" placeholder={"Username"}/><br/><br/>
                         </div>
                         <div id={"logon-input-block"}>
-                            <a id={"password-reset-hyperlink"} href="/password reset">Forget Password?</a>
+                            <a id="password-reset-hyperlink" href="/password reset">Forget Password?</a>
                             <input id="input-password-text" type="password" placeholder={"Password"}/><br/><br/>
                         </div>
                         <input id="logon-submit-btn" type="submit" name="commit" value="Sign   in"/>
