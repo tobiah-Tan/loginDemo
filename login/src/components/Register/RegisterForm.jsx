@@ -28,6 +28,10 @@ class RegisterForm extends Component {
             });
         }
         this.props.history.push('/logon');
+
+        //========test==========
+        // this.props.registerFn.registerAc();
+        // console.log(this.props.registerData.name);
     };
 
     handleChange= e =>{
@@ -74,7 +78,7 @@ class RegisterForm extends Component {
                     <p id="welcome-slogan">Welcome to the pages of Register!</p>
                 </div>
                 <div id="register-container">
-                    <form id="register-input-form" action="/session" onSubmit={this.handleSubmit}>
+                    <form id="register-input-form"  onSubmit={this.handleSubmit}>
                         <div id={"input-block"}>
                             <label id="input-label" htmlFor="username">请输入用户名</label>
                             <input id="input-username-text" className={classname({"is-invalid":errMsg[0]==="username"})} type="text" defaultValue={username} name="username" onChange={this.handleChange} />
@@ -83,7 +87,7 @@ class RegisterForm extends Component {
                         </div>
                         <div id={"input-block"}>
                             <label id="input-label" htmlFor="email">邮箱</label>
-                            <input id="input-username-text" className={classname({"is-invalid":errMsg[0]==="email"})} type="text" defaultValue={email} name="email" onChange={this.handleChange} />
+                            <input id="input-email-text" className={classname({"is-invalid":errMsg[0]==="email"})} type="text" defaultValue={email} name="email" onChange={this.handleChange} />
                             <small id="input-warning-info">{errMsg[0]==="email" && errMsg[1]}</small><br/><br/>
                         </div>
                         <div id={"input-block"}>

@@ -1,7 +1,6 @@
 {
   "name": "localserver",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +11,6 @@
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "express": "^4.17.1"
-  }
+  },
+  "description": ""
 }
