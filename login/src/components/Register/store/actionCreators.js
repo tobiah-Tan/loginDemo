@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
 import axios from '../../../utils/request';
 
 export const registerAc = data =>{
@@ -13,14 +11,3 @@ export const registerAc = data =>{
 
 };
 
-
-/*
-//=======test=======
->>>>>>> 44588e144ab5ca46a93f40593c1df97ebac7750c
-export const registerAc = ()=>{
-    console.log('发起请求！！');
-    return {
-        type:'xxx'
-    };
-
-}*/
