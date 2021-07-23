@@ -1,3 +1,4 @@
+// const bcryptjs = require('bcryptjs');
 const db = require('../database');
 
 module.exports= (req,res)=>{
@@ -12,9 +13,20 @@ module.exports= (req,res)=>{
         }
 
         const sql = 'INSERT INTO users set ?';
+        //密码机密
+        // req.body.password = bcrypt.hashSync(req.body.password,10);
         const{username,email,password} = req.body;
         db(sql,{username,email,password},result=>{
-            res.send(result)
+            if(result.affectedRows === 1){
+                 return res.send({
+                    status:0,
+                    msg:'注册成功'
+                })
+            }
+            res.send({
+                status: 1,
+                msg:'注册失败'
+            })
         })
         // res.send({
         //     status:0,

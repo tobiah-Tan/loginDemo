@@ -1,0 +1,136 @@
+[33mcommit 9cf1c95642f9f2c0cd7d18dac730b6236877aceb[m[33m ([m[1;36mHEAD -> [m[1;32myoga14s[m[33m)[m
+Merge: 3f7f9cc e502cd8
+Author: tsx <123qqq@qq.com>
+Date:   Fri Jul 23 09:56:35 2021 +0800
+
+    Merge branch 'main' of github.com:tobiah-Tan/loginDemo into yoga14s
+    
+    # Conflicts:
+    #       localServer/database/index.js
+    #       login/.idea/workspace.xml
+    #       login/src/components/Register/store/reducer.js
+
+[33mcommit 3f7f9cc5b3e79e09c844efa0369b5ea894634365[m
+Author: tsx <123qqq@qq.com>
+Date:   Fri Jul 23 09:55:29 2021 +0800
+
+    yoga14s update temp
+
+[33mcommit e502cd873a4c1695030a0d771addcbedef0a8c4d[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: tanshengxiang <tobiah7@outlook.com>
+Date:   Thu Jul 22 23:56:06 2021 +0800
+
+    sony13 update mysql v5.0
+
+[33mcommit 02c484e3aea4afa474b8171ac17db3a419740477[m
+Merge: d72e1dd 44588e1
+Author: tanshengxiang <tobiah7@outlook.com>
+Date:   Thu Jul 22 15:31:12 2021 +0800
+
+    Merge branch 'main' of github.com:tobiah-Tan/loginDemo into sony13
+    
+    # Conflicts:
+    #       login/.idea/workspace.xml
+    #       login/src/components/Register/store/actionCreators.js
+    #       login/src/components/Register/store/reducer.js
+
+[33mcommit d72e1dd90ae9ecbfde5c6878e74dbfffeea6f805[m
+Author: tanshengxiang <tobiah7@outlook.com>
+Date:   Thu Jul 22 15:30:36 2021 +0800
+
+    sony13 update temp
+
+[33mcommit 72749d69fdd25d3a842daa85f78e70ec6be0e2bd[m
+Merge: 7fe9805 44588e1
+Author: tsx <123qqq@qq.com>
+Date:   Wed Jul 21 10:19:48 2021 +0800
+
+    Merge branch 'main' of github.com:tobiah-Tan/loginDemo into yoga14s
+
+[33mcommit 7fe9805828dc1637f3958e9e2267f2ae5cc93701[m
+Author: tsx <123qqq@qq.com>
+Date:   Wed Jul 21 10:19:34 2021 +0800
+
+    yoga14s temp update
+
+[33mcommit 44588e144ab5ca46a93f40593c1df97ebac7750c[m[33m ([m[1;31morigin/yoga14s[m[33m)[m
+Author: tanshengxiang <tobiah7@outlook.com>
+Date:   Tue Jul 20 00:10:26 2021 +0800
+
+    sony13 creare flash component v5.0
+
+[33mcommit d684e566859658e68c4004244ce5b4dd932dd249[m
+Author: tsx <123qqq@qq.com>
+Date:   Thu Jul 15 19:57:05 2021 +0800
+
+    yoga14s redux update v4.3
+
+[33mcommit 2358d5d386e112864cd3b0fe1cea4278c38e10fc[m
+Author: tanshengxiang <tobiah7@outlook.com>
+Date:   Wed Jul 14 00:07:11 2021 +0800
+
+    sony13 redux update v4.2
+
+[33mcommit 89ca68e4acc97e35eaa4ca9b73b0b09848b4e568[m
+Author: tanshengxiang <tobiah7@outlook.com>
+Date:   Tue Jul 13 09:33:02 2021 +0800
+
+    sony13 redux v4.1
+
+[33mcommit 0fc954b72b9b3627071ad25298af8d6c2949b987[m
+Author: tsx <123qqq@qq.com>
+Date:   Mon Jul 12 22:33:54 2021 +0800
+
+    yoga14s update redux v4.0
+
+[33mcommit 61129056c1f4a008d9fcbb4737d7aec4d7a5416d[m
+Merge: 130bdd4 d682077
+Author: tsx <123qqq@qq.com>
+Date:   Mon Jul 12 10:53:01 2021 +0800
+
+    Merge branch 'main' of github.com:tobiah-Tan/loginDemo into yoga14s
+    
+    # Conflicts:
+    #       login/.idea/workspace.xml
+
+[33mcommit 130bdd446d4e806cf1680712c098a273cf82a936[m
+Author: tsx <123qqq@qq.com>
+Date:   Mon Jul 12 10:52:14 2021 +0800
+
+    workspace change
+
+[33mcommit d6820774ad64609bac355724a6bf501bb180d369[m
+Author: tanshengxiang <tobiah7@outlook.com>
+Date:   Mon Jul 12 00:12:08 2021 +0800
+
+    sony13 v3.2 update handleChange and state of register
+
+[33mcommit 4815bec122d84d745f33610cba78017b4dc81403[m
+Author: tsx <123qqq@qq.com>
+Date:   Sun Jul 11 16:22:30 2021 +0800
+
+    yoga14s v3.1
+
+[33mcommit 36874c39791fbb0fd43282ac69b6b8f9a8b6e3a0[m
+Author: tsx <123qqq@qq.com>
+Date:   Sun Jul 11 16:01:40 2021 +0800
+
+    yoga14s v3.0 change background
+
+[33mcommit c11a1de0e06ac37a225a7fd27f42e96eb3a9f2d3[m
+Author: tanshengxiang <tobiah7@outlook.com>
+Date:   Sun Jul 11 00:03:54 2021 +0800
+
+    original sony13 v2.0
+
+[33mcommit 07894d784d9aad39ec03ea1ce594c00d31e70250[m
+Author: tsx <123qqq@qq.com>
+Date:   Tue Jul 6 18:04:19 2021 +0800
+
+    original1.0
+
+[33mcommit 263e6e52f01f9bc85c69da56be4ac93777d5ec76[m[33m ([m[1;32mmain[m[33m)[m
+Author: Tan_tobiah <83565681+tobiah-Tan@users.noreply.github.com>
+Date:   Mon Jul 5 23:59:38 2021 +0800
+
+    Initial commit

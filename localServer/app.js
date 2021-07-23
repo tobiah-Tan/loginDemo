@@ -6,6 +6,7 @@ app.use(express.urlencoded({extended:false}));//解析 application/x-www-form-ur
 app.use(express.json())//解析 application/json
 
 app.use('/api/register',require('./router/register'));
+app.use('/api/logon',require('./router/logon'));
 
 //错误处理
 app.use((err,req,res,next)=>{

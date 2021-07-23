@@ -81,23 +81,23 @@ class RegisterForm extends Component {
                     <form id="register-input-form"  onSubmit={this.handleSubmit}>
                         <div id={"input-block"}>
                             <label id="input-label" htmlFor="username">请输入用户名</label>
-                            <input id="input-username-text" className={classname({"is-invalid":errMsg[0]==="username"})} type="text" defaultValue={username} name="username" onChange={this.handleChange} />
+                            <input id="input-username-text" className={classname({"is-invalid":errMsg[0]==="username"})} type="text" autoComplete={"username"} defaultValue={username} name="username" onChange={this.handleChange} />
                             <small id="input-warning-info">{errMsg[0]==="username" && errMsg[1]}</small><br/><br/>
 
                         </div>
                         <div id={"input-block"}>
                             <label id="input-label" htmlFor="email">邮箱</label>
-                            <input id="input-email-text" className={classname({"is-invalid":errMsg[0]==="email"})} type="text" defaultValue={email} name="email" onChange={this.handleChange} />
+                            <input id="input-email-text" className={classname({"is-invalid":errMsg[0]==="email"})} type="text" autoComplete={"email"} defaultValue={email} name="email" onChange={this.handleChange} />
                             <small id="input-warning-info">{errMsg[0]==="email" && errMsg[1]}</small><br/><br/>
                         </div>
                         <div id={"input-block"}>
                             <label id="input-label" htmlFor="password">请输入密码</label>
-                            <input id="input-password-text" className={classname({"is-invalid":errMsg[0]==="password"})} type="password" defaultValue={password} name="password" onChange={this.handleChange}/>
+                            <input id="input-password-text" className={classname({"is-invalid":errMsg[0]==="password"})} type="password" autoComplete={"new-password"} defaultValue={password} name="password" onChange={this.handleChange}/>
                             <small id="input-warning-info">{errMsg[0]==="password" && errMsg[1]}</small><br/><br/>
                         </div>
                         <div id={"input-block"}>
                             <label id="input-label" htmlFor="passwordConfirm">确认密码</label>
-                            <input id="input-password-confirm" className={classname({"is-invalid":errMsg[0]==="passwordConfirm"})} type="password" defaultValue={passwordConfirm} name="passwordConfirm" onChange={this.handleChange}/>
+                            <input id="input-password-confirm" className={classname({"is-invalid":errMsg[0]==="passwordConfirm"})} type="password" autoComplete={"new-password"} defaultValue={passwordConfirm} name="passwordConfirm" onChange={this.handleChange}/>
                             <small id="input-warning-info">{errMsg[0]==="passwordConfirm" && errMsg[1]}</small><br/><br/>
                         </div>
                         <input id="register-submit-btn" type="submit" name="commit" value="Sign   Up"/>
