@@ -1,14 +1,28 @@
 import React, {Component} from 'react';
-import "./index.css";
+import { connect } from 'react-redux';
+import {bindActionCreators} from "redux";
+import {actionCreators as logonActionCreactors} from './store';
 import LogonForm from "./LogonForm";
 
 
-export default class Logon extends Component {
+class Logon extends Component {
 
     render() {
         return (
-            <LogonForm/>
+            <LogonForm {...this.props}/>
         );
     }
 }
 
+const mapStateToProps = state =>{
+    return {
+        logonData:state.logon
+    }
+};
+
+const mapDispatchToProps = dispatch =>{
+    return {
+        logonFn:bindActionCreators(logonActionCreactors,dispatch)
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Logon)

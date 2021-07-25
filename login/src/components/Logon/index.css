@@ -8,7 +8,7 @@
     height: 480px;
     border: 1px solid #cbcbcb;
     position: relative;
-    background: #00000060;
+    background: rgba(8, 8, 8, 0.28);
     border-radius: 8px;
     margin: 2px auto;
 
@@ -61,12 +61,13 @@
 }
 
 
-#input-username-text,
-#input-password-text {
+#logon-input-username-text,
+#logon-input-password-text {
     width: 100%;
     height: 30px;
     /*display: block;*/
-    border-width: 0;
+    border-radius: 3px;
+    border:2px solid #cdcdcd;
     padding: 0;
 
 }

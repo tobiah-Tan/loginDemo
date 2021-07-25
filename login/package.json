@@ -11,6 +11,8 @@
     "classname": "^0.0.0",
     "create-react-app": "^4.0.3",
     "http-proxy-middleware": "^2.0.1",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
     "nanoid": "^3.1.23",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

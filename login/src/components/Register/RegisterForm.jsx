@@ -20,8 +20,9 @@ class RegisterForm extends Component {
         e.preventDefault();
         this.setState({errMsg: []});
         const {data} = await this.props.registerFn.registerAc(this.state.userInfo);
-        console.log(data);
+        // console.log(data);
         // console.log(this.props.registerData.name);
+        alert(data.msg)
         if (data.status === 1) {
             return this.setState({
                 errMsg: data.msg,
@@ -80,23 +81,23 @@ class RegisterForm extends Component {
                 <div id="register-container">
                     <form id="register-input-form"  onSubmit={this.handleSubmit}>
                         <div id={"input-block"}>
-                            <label id="input-label" htmlFor="username">请输入用户名</label>
+                            <label id="input-label" htmlFor="username">Username</label>
                             <input id="input-username-text" className={classname({"is-invalid":errMsg[0]==="username"})} type="text" autoComplete={"username"} defaultValue={username} name="username" onChange={this.handleChange} />
                             <small id="input-warning-info">{errMsg[0]==="username" && errMsg[1]}</small><br/><br/>
 
                         </div>
                         <div id={"input-block"}>
-                            <label id="input-label" htmlFor="email">邮箱</label>
+                            <label id="input-label" htmlFor="email">Email</label>
                             <input id="input-email-text" className={classname({"is-invalid":errMsg[0]==="email"})} type="text" autoComplete={"email"} defaultValue={email} name="email" onChange={this.handleChange} />
                             <small id="input-warning-info">{errMsg[0]==="email" && errMsg[1]}</small><br/><br/>
                         </div>
                         <div id={"input-block"}>
-                            <label id="input-label" htmlFor="password">请输入密码</label>
+                            <label id="input-label" htmlFor="password">Password</label>
                             <input id="input-password-text" className={classname({"is-invalid":errMsg[0]==="password"})} type="password" autoComplete={"new-password"} defaultValue={password} name="password" onChange={this.handleChange}/>
                             <small id="input-warning-info">{errMsg[0]==="password" && errMsg[1]}</small><br/><br/>
                         </div>
                         <div id={"input-block"}>
-                            <label id="input-label" htmlFor="passwordConfirm">确认密码</label>
+                            <label id="input-label" htmlFor="passwordConfirm">PasswordConfirm</label>
                             <input id="input-password-confirm" className={classname({"is-invalid":errMsg[0]==="passwordConfirm"})} type="password" autoComplete={"new-password"} defaultValue={passwordConfirm} name="passwordConfirm" onChange={this.handleChange}/>
                             <small id="input-warning-info">{errMsg[0]==="passwordConfirm" && errMsg[1]}</small><br/><br/>
                         </div>

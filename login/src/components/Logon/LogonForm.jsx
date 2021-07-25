@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 import {NavLink,Route} from "react-router-dom";
+import "./index.css";
 import Register from "../Register";
-import axios from "../../utils/request";
+// import axios from "../../utils/request";
+import decode from "jwt-decode";
 
 export default class LogonForm extends Component {
 
@@ -14,8 +16,13 @@ export default class LogonForm extends Component {
 
     handleSubmit = async e =>{
         e.preventDefault();
-        const { data } = await axios.post('/api/logon',this.state.userInfo);
-        console.log(data);
+        const { data } = await this.props.logonFn.logonAc(this.state.userInfo);
+        // console.log(data);
+        alert(data.msg)
+        if(data.status === 0){
+            //同步用户信息和用户状态到redux
+            this.props.logonFn.syncInfoAc(decode(data.token));
+        }
     };
 
     handleChange = e =>{
@@ -54,22 +61,23 @@ export default class LogonForm extends Component {
                             d="M294.833797 332.790256m-46.529944 0a46.529945 46.529945 0 1 0 93.059889 0 46.529945 46.529945 0 1 0-93.059889 0Z"
                             fill="#7A993B" p-id="2696"/>
                     </svg>
-                    <p id="welcome-slogan">Welcome U</p>
+                    {/*<p id="welcome-slogan">Welcome U</p>*/}
                 </div>
                 <div id="logon-box-container">
                     <h2 id="logon-title">Login</h2>
                     <form id="logon-input-form" action="/session" onSubmit={this.handleSubmit}>
                         <div id={"input-block"}>
                             <label htmlFor="username"/>
-                            <input id="input-username-text" type="text" autoComplete={"username"}
+                            <input id="logon-input-username-text" type="text" autoComplete={"username"}
                                    name={"username"}
                                    defaultValue={username}
                                    onChange={this.handleChange}
                                    placeholder={"Username"}/><br/><br/>
+                            <small></small>
                         </div>
                         <div id={"logon-input-block"}>
                             <a id="password-reset-hyperlink" href="/password-reset">Forget Password?</a>
-                            <input id="input-password-text" type="password" autoComplete={"password"}
+                            <input id="logon-input-password-text" type="password" autoComplete={"password"}
                                    name={"password"}
                                    defaultValue={password}
                                    onChange={this.handleChange}

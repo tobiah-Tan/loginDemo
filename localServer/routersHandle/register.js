@@ -1,4 +1,4 @@
-// const bcryptjs = require('bcryptjs');
+// const bcrypt = require('bcryptjs');
 const db = require('../database');
 
 module.exports= (req,res)=>{
@@ -13,8 +13,8 @@ module.exports= (req,res)=>{
         }
 
         const sql = 'INSERT INTO users set ?';
-        //密码机密
-        // req.body.password = bcrypt.hashSync(req.body.password,10);
+        //密码加密
+        // req.body.password = bcrypt.hashSync('bacon',10);
         const{username,email,password} = req.body;
         db(sql,{username,email,password},result=>{
             if(result.affectedRows === 1){

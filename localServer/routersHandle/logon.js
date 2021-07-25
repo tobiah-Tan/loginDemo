@@ -1,4 +1,6 @@
+const jwt = require('jsonwebtoken');
 const db = require('../database');
+
 
 module.exports = (req,res) => {
     //1、查询用户名是否存在
@@ -17,9 +19,14 @@ module.exports = (req,res) => {
                 msg:'密码错误！'
             })
         }
+        //3、根据用户信息生成token
+        const token = jwt.sign({username: req.body.username},'secret',{
+            expiresIn:'1h',
+        });
         res.send({
             status: 0,
-            msg: '登陆成功！'
+            msg: '登陆成功！',
+            token
         })
     })
     // res.send('ok');
